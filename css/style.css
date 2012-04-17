@@ -63,6 +63,17 @@ p {
 	margin-bottom: 10px;
 }
 
+a {
+	color: #45a5d2;
+}
+
+a:link,
+a:target,
+a:visited {
+	color: #45a5d2;
+	text-decoration: none;
+}
+
 /* Button
 -----------------------------------------------------------------------------*/
 
@@ -400,6 +411,14 @@ p {
 	padding: 25px;
 	text-align: center;
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5);
+}
+
+.download .first-time a {
+	color: #071e29;
+	font-weight: 500;
+	text-shadow: none;
+	text-decoration: underline;
+	padding: 2px;
 }
 
 /* Footnotes

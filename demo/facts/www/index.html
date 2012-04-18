@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+		<title></title>
+
+		<!-- default iOS styles -->
+		<link rel="stylesheet" href="css/iOS.css" />
+
+		<!-- your own styles -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<!--link rel="stylesheet" href="css/styles.min.css" /-->
+
+		<!-- mootools -->
+		<script type="text/javascript" src="js/libs/mootools-core-1.4.5.js"></script>
+		<!-- <script type="text/javascript" src="js/libs/mootools-core-1.4.5.min.js"></script> -->
+		<script type="text/javascript" src="js/libs/mootools-more-1.4.0.1.js"></script>
+		<!-- <script type="text/javascript" src="js/libs/mootools-more-1.4.0.1.min.js"></script> -->
+
+		<!-- moobile -->
+		<script type="text/javascript" src="js/libs/moobile-0.1.js"></script>
+		<!--script type="text/javascript" src="js/libs/moobile-0.1.min.js"></script-->
+
+		<!-- your app code -->
+		<script type="text/javascript" src="js/app.js"></script>
+		<!--script type="text/javascript" src="js/app.min.js"></script -->
+
+	</head>
+	<body>
+
+		<script type="text/javascript">
+
+			var facts = LocalStorage.get('facts');
+			if (facts == null) {
+				facts = [
+					{
+						title: 'The human brain',
+						descr: 'Your brain is 80% water. | The human brain stops growing at the age of 18. | The human brain has the capacity to store everything that you experience. | There are more nerve cells in the human brain than there are stars in the Milky Way. | On average, there\'s 100 billion neurons in the human brain.'.replace(/\|/g, '\n')
+					},
+					{
+						title: 'Water',
+						descr: ' Pure water (H2O) does not conduct electricity on its own. | The water of the Antarctica is so cold that nothing can rot there. | Sound travels about 4 times faster in water than in air. | A person can live without food for about a month, but only about a week without water.'.replace(/\|/g, '\n')
+					}
+				];
+				LocalStorage.set('facts', facts);
+			}
+
+			window.addEvent('ready', function() {
+				var rootViewController = new Moobile.ViewControllerStack();
+				new Moobile.WindowController()
+					.setRootViewController(rootViewController)
+					.getRootViewController()
+						.pushViewController(new ViewController.Home);
+			});
+
+		</script>
+
+	</body>
+</html>

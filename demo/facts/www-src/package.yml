@@ -1,0 +1,20 @@
+name: "App"
+
+exports: "app.js"
+
+web: ""
+
+description: ""
+
+license: ""
+
+copyright: ""
+
+authors: ""
+
+sources:
+
+  - "Source/ViewController/ViewController.Home.js"
+  - "Source/ViewController/ViewController.Add.js"
+  - "Source/ViewController/ViewController.Fact.js"
+  - "Source/Storage/LocalStorage.js"

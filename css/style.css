@@ -30,27 +30,6 @@ body {
 	min-height: 740px;
 }
 
-.mobile {
-	display: none !important;
-}
-
-@media only screen and (max-device-width: 480px) {
-	.desktop {
-		display: none !important;
-	}
-	.mobile {
-		display: block;
-	}
-}
-
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-	.desktop {
-		display: none !important;
-	}
-	.mobile {
-		display: block;
-	}
-}
 /* Typography
 -----------------------------------------------------------------------------*/
 

@@ -60,10 +60,10 @@ ViewController.Home = new Class({
 		this.swipeButton.addEvent('swipe', this.bound('onSwipeButtonSwipe'));
 	},
 
-	viewWillEnter: function() {
-		this.transitionList.clearSelectedItem();
-		this.controlList.clearSelectedItem();
-	},
+	// viewDidEnter: function() {
+	// 	this.transitionList.clearSelectedItem();
+	// 	this.controlList.clearSelectedItem();
+	// },
 
 	destroy: function() {
 		this.transitionList.removeEvent('select', this.bound('onTransitionItemSelect'));
